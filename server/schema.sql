@@ -4,20 +4,19 @@ CREATE DATABASE chat;
 USE chat;
 
 CREATE TABLE messages (
-  user varchar(20),
-  messages varchar(3000),
-  room varchar(100),
-  created_at date
+  id int NOT NULL AUTO_INCREMENT,
+  user_id varchar(20),
+  message varchar(3000),
+  roomname varchar(100),
+  PRIMARY KEY (ID)
 
-  /* Describe your table here.*/
 );
 
-/* Create other tables and define schemas for them here! */
+CREATE TABLE users (
+  id int NOT NULL AUTO_INCREMENT,
+  username varchar(20),
+  PRIMARY KEY (ID)
+);
 
 
-
-
-/*  Execute this file from the command line by typing:
- *    mysql -u root < server/schema.sql
- *  to create the database and the tables.*/
 
